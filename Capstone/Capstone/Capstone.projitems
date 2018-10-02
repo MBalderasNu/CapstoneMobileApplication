@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{EBB18209-6F50-4980-8234-A1A4A33EC8F3}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Capstone</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AzureMobileService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CheckItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseModels\DCUsers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditProfilePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MyLineup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLAllStarPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\FantasyPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\FantasyTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\FantasyTeamData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SimYearSelection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StarPlayerSelection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\CustomPlayerLineupPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\CustomPlayerLineupXaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DatabaseModels\UserAccount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Database\DAHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HomeSignInPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\NFLFantasyLineupSelectionPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\PerfectNFLineupTwentySeventeen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekEight.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekEleven.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekFifteen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekFive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekFour.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekFourteen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekNine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekOne.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekSeven.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekSeventeen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekSix.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekSixteen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekTen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekThirteen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekThree.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekTwelve.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLFantasyPerfectLineups\TwentySeventeenNFLWeekTwo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\ArizonaCardinalPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\AtlantaFalconsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\BaltimoreRavensPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\BuffaloBillsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\CarolinaPanthersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\ChicagoBearsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\CincinnatiBengalsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\ClevelandBrownsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\CustomNFLPlayerCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\DallasCowboysPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\DenverBroncosPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\DetroitLionsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\GreenBayPackersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\HoustonTexansPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\IndianapolisColtsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\JacksonvilleJaguarsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\KansasCityChiefsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\LosAngelesChargersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\LosAngelesRamsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\MiamiDolphinsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\MinnesotaVikingsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\NewEnglandPatriotsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\NewOrleansSaintsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\NewYorkGiantsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\NewYorkJetsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\OaklandRaidersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\PhiladelphlaEaglesPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\PittsburghSteelersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\SanFrancisco49ersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\SeattleSeahawksPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\TampaBayBuccaneersPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\TennesseeTitansPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NFLPlayersByTeam\WashingtonRedskinsPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ProfilePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SelectMultipleBasePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SignUpPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SimGamePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SportDetailPlayerPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SportPlayerPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SportSelection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SportTeamsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\CustomPlayerLineupData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\CustomPlayersLineupCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\NFLPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\NFLTeam.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\NFLTeamData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\PlayerDataModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\PlayerStatsModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\TeamPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TeamProfilePageData\ViewModelBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TopNFLPlayers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserAccounts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)LoginPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MasterDetailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MasterDetailPageDetail.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)MasterDetailPageMaster.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)signin.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)TeamProfilePageData\CustomPlayerLineupCellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+</Project>
