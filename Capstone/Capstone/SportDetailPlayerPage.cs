@@ -14,6 +14,8 @@ namespace Capstone
 {
     public class SportDetailPlayerPage : ContentPage
 	{
+        string username = "";
+        string password = "";
 
         public ObservableCollection<NFLPlayer> players { get; set; }
 
@@ -48,8 +50,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=arizona-cardinals";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -321,8 +321,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=atlanta-falcons";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -563,8 +561,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=baltimore-ravens";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -766,8 +762,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=buffalo-bills";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -788,64 +782,38 @@ namespace Capstone
 
                     //Colt Anderson S
                     players.Add(new NFLPlayer { Name = k.playerentry[1].player.FirstName + k.playerentry[1].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[2].player.FirstName + k.playerentry[2].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[3].player.FirstName + k.playerentry[3].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[4].player.FirstName + k.playerentry[4].player.LastName });
-
+                 
                     //Kelvin Benjamin WR
                     players.Add(new NFLPlayer { Name = k.playerentry[5].player.FirstName + k.playerentry[5].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[6].player.FirstName + k.playerentry[6].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[7].player.FirstName + k.playerentry[7].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[8].player.FirstName + k.playerentry[8].player.LastName });
-
+                   
                     //Preston Brown LB
                     players.Add(new NFLPlayer { Name = k.playerentry[9].player.FirstName + k.playerentry[9].player.LastName });
-                    //players.Add(new NFLPlayer { Name = k.playerentry[10].player.FirstName + k.playerentry[10].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[11].player.FirstName + k.playerentry[11].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[12].player.FirstName + k.playerentry[12].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[13].player.FirstName + k.playerentry[13].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[14].player.FirstName + k.playerentry[14].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[15].player.FirstName + k.playerentry[15].player.LastName });
-
+                    
                     //Nordly Capi DE ?
                     players.Add(new NFLPlayer { Name = k.playerentry[16].player.FirstName + k.playerentry[16].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[17].player.FirstName + k.playerentry[17].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[18].player.FirstName + k.playerentry[18].player.LastName });
-
+                  
                     //Charles Clay TE
                     players.Add(new NFLPlayer { Name = k.playerentry[19].player.FirstName + k.playerentry[19].player.LastName });
-
-
-                   // players.Add(new NFLPlayer { Name = k.playerentry[20].player.FirstName + k.playerentry[20].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[21].player.FirstName + k.playerentry[21].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[22].player.FirstName + k.playerentry[22].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[23].player.FirstName + k.playerentry[23].player.LastName });
 
                     //Ryan Davis DE
                     players.Add(new NFLPlayer { Name = k.playerentry[24].player.FirstName + k.playerentry[24].player.LastName });
 
                     //Dion Dawkins T
                     players.Add(new NFLPlayer { Name = k.playerentry[25].player.FirstName + k.playerentry[25].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[26].player.FirstName + k.playerentry[26].player.LastName });
+                  
 
                     //Patrick DiMarco DB
                     players.Add(new NFLPlayer { Name = k.playerentry[27].player.FirstName + k.playerentry[27].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[28].player.FirstName + k.playerentry[28].player.LastName });
+
                     //Vladimir Ducasse G
                     players.Add(new NFLPlayer { Name = k.playerentry[29].player.FirstName + k.playerentry[29].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[30].player.FirstName + k.playerentry[30].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[31].player.FirstName + k.playerentry[31].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[32].player.FirstName + k.playerentry[32].player.LastName });
 
                     //Reid Ferguson LS
                     players.Add(new NFLPlayer { Name = k.playerentry[33].player.FirstName + k.playerentry[33].player.LastName });
 
                     //E.J. Gaines CB
                     players.Add(new NFLPlayer { Name = k.playerentry[34].player.FirstName + k.playerentry[34].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[35].player.FirstName + k.playerentry[35].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[36].player.FirstName + k.playerentry[36].player.LastName });
-                   // players.Add(new NFLPlayer { Name = k.playerentry[37].player.FirstName + k.playerentry[37].player.LastName });
-
+                 
                     //Ryan Groy G
                     players.Add(new NFLPlayer { Name = k.playerentry[38].player.FirstName + k.playerentry[38].player.LastName });
                    // players.Add(new NFLPlayer { Name = k.playerentry[39].player.FirstName + k.playerentry[39].player.LastName });
@@ -948,23 +916,10 @@ namespace Capstone
 
                     //Brandon Reilly WR
                     players.Add(new NFLPlayer { Name = k.playerentry[89].player.FirstName + k.playerentry[89].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[90].player.FirstName + k.playerentry[90].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[91].player.FirstName + k.playerentry[91].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[92].player.FirstName + k.playerentry[92].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[93].player.FirstName + k.playerentry[93].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[94].player.FirstName + k.playerentry[94].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[95].player.FirstName + k.playerentry[95].player.LastName });
-
+                 
                     //Colton Schmidt P 
                     players.Add(new NFLPlayer { Name = k.playerentry[96].player.FirstName + k.playerentry[96].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[97].player.FirstName + k.playerentry[97].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[98].player.FirstName + k.playerentry[98].player.LastName });
-                  //  players.Add(new NFLPlayer { Name = k.playerentry[99].player.FirstName + k.playerentry[99].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[100].player.FirstName + k.playerentry[100].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[101].player.FirstName + k.playerentry[101].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[102].player.FirstName + k.playerentry[102].player.LastName });
-                 //   players.Add(new NFLPlayer { Name = k.playerentry[103].player.FirstName + k.playerentry[103].player.LastName });
-
+                
                     //Brandon Tate WR
                     players.Add(new NFLPlayer { Name = k.playerentry[104].player.FirstName + k.playerentry[104].player.LastName });
 
@@ -1037,8 +992,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=carolina-panthers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -1344,8 +1297,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=chicago-bears";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -1613,8 +1564,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=cincinnati-bengals";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -1828,8 +1777,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=cleveland-browns";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -2097,8 +2044,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=dallas-cowboys";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -2323,8 +2268,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=denver-broncos";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -2582,8 +2525,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=detroit-lions";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -2778,8 +2719,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=greenbay-packers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -3019,8 +2958,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=houston-texans";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -3267,8 +3204,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=indianapolis-colts";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -3517,8 +3452,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=jacksonville-jaguars";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -3773,8 +3706,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=kansascity-chiefs";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -4026,8 +3957,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=losangeles-chargers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -4256,8 +4185,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=losangeles-rams";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -4529,8 +4456,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=miami-dolphins";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -4765,8 +4690,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=minnesota-vikings";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -5028,8 +4951,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=newengland-patriots";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -5281,8 +5202,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=neworleans-saints";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -5563,8 +5482,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=newyork-giants";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -5858,8 +5775,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=newyork-jets";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -6111,8 +6026,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=oakland-raiders";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -6334,8 +6247,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=philadelphia-eagles";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -6596,8 +6507,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=pittsburgh-steelers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -6850,8 +6759,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=sanfrancisco-49ers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -7109,8 +7016,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=seattle-seahawks";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -7368,8 +7273,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=tampabay-buccaneers";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -7635,8 +7538,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=tennessee-titans";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 
@@ -7895,8 +7796,6 @@ namespace Capstone
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/active_players.json?team=washington-redskins";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 

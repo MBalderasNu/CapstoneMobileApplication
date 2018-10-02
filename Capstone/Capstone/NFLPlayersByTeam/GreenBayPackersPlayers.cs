@@ -16,6 +16,8 @@ namespace Capstone.NFLPlayersByTeam
 	public class GreenBayPackersPlayers : ContentPage
 	{
 
+        string username = "";
+        string password = "";
         public ObservableCollection<NFLPlayer> players { get; set; }
 
         SearchBar search = new SearchBar();
@@ -64,8 +66,6 @@ namespace Capstone.NFLPlayersByTeam
         {
             string url = "https://api.mysportsfeeds.com/v1.2/pull/nfl/2017-regular/cumulative_player_stats.json?team=greenbay-packers&playerstats=Att,Comp,Yds,TD";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(new Uri(url));
-            String username = "MBalderasNu";
-            String password = "Sexyback966";
             String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("ISO-8859-1").GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + encoded);
 

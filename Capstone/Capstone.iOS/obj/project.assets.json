@@ -6019,20 +6019,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Matthew Balderas\\.nuget\\packages\\": {}
+    "C:\\Users\\MatthewBalderas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MBALDERAS\\Capstone\\Capstone\\Capstone.iOS\\Capstone.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\MatthewBalderas\\Testingout\\Capstone\\Capstone.iOS\\Capstone.iOS.csproj",
       "projectName": "Capstone.iOS",
-      "projectPath": "D:\\MBALDERAS\\Capstone\\Capstone\\Capstone.iOS\\Capstone.iOS.csproj",
-      "packagesPath": "C:\\Users\\Matthew Balderas\\.nuget\\packages\\",
-      "outputPath": "D:\\MBALDERAS\\Capstone\\Capstone\\Capstone.iOS\\obj\\",
+      "projectPath": "C:\\Users\\MatthewBalderas\\Testingout\\Capstone\\Capstone.iOS\\Capstone.iOS.csproj",
+      "packagesPath": "C:\\Users\\MatthewBalderas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MatthewBalderas\\Testingout\\Capstone\\Capstone.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Matthew Balderas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\MatthewBalderas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6045,8 +6045,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\MBALDERAS\\Capstone\\Capstone\\Capstone.Android\\Capstone.Android.csproj": {
-              "projectPath": "D:\\MBALDERAS\\Capstone\\Capstone\\Capstone.Android\\Capstone.Android.csproj"
+            "C:\\Users\\MatthewBalderas\\Testingout\\Capstone\\Capstone.Android\\Capstone.Android.csproj": {
+              "projectPath": "C:\\Users\\MatthewBalderas\\Testingout\\Capstone\\Capstone.Android\\Capstone.Android.csproj"
             }
           }
         }

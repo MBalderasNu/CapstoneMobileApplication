@@ -15,7 +15,8 @@ namespace Capstone.NFLPlayersByTeam
 {
 	public class AtlantaFalconsPlayers : ContentPage
 	{
-
+        string username = "";
+        string password = "";
         public static  ObservableCollection<NFLPlayer> players { get; set; }
 
         SearchBar search = new SearchBar();
